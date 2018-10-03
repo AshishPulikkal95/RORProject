@@ -19,7 +19,7 @@ class ArticlesController < ApplicationController
           flash[:success] = "Successfully created"
           redirect_to article_path(@article)
        else
-           render :new
+           render 'new'
        end
     end
     
@@ -29,7 +29,7 @@ class ArticlesController < ApplicationController
             flash[:success]= "Updated successfully!!"
             redirect_to article_path(@article)
         else 
-            render :edit
+            render 'edit'
         end
     end
     
